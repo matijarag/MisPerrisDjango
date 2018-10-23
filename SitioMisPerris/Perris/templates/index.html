@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block title %}
+Index Perris
+{% endblock %}
+{% block content %}
+    {% for mascota in Mascotas %}
+    {% load static %}
+        <img src="{% static 'Perris/'%}{{ mascota.foto }}" style="height : 100px; width : 100px;">
+    {% endfor %}
+{% endblock %}
+{% block footer %}
+ <div class="navbar navbar-inverse navbar-fixed-bottom">
+ <center style="padding-top: 12px">
+ <small style="color: #fff">Footer Form</small>
+     </center>
+ </div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "C:\\Program Files (x86)\\Ampps\\python\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": true
+}

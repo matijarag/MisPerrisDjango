@@ -1,0 +1,13 @@
+Para crear las migraciones de los modelos custom
+manage.py makemigrations
+
+Para realizarlas
+manage.py migrate
+
+CrearUsuario
+manage.py createsuperuser
+
+
+Runserver
+manage.py runserver
+
