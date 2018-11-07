@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+{% block title %}
+Index Usuario
+{% endblock %}
+{% block content %}
+    {% if form.errors %}
+        <p class="error">Uusuario o password no Valido</p>    
+    {% endif %}
+
+<form action="/accounts/auth/" method="POST">{% csrf_token %}
+    <label for="username">User name:</label>
+    <input type="text" name="username" value="" id="username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" id="password">
+
+    <input type="submit" value="login" />
+</form>
+{% endblock %}
+{% block footer %}
+ <div class="navbar navbar-inverse navbar-fixed-bottom">
+ <center style="padding-top: 12px">
+ <small style="color: #fff">Footer Form</small>
+ </center>
+ </div>
+{% endblock %}
