@@ -39,12 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Perris',
     'RegistroUsu',
-    'custom_user',
 ]
 
-AUTH_USER_MODEL = "custom_user.CustomUser" 
-
-AUTHENTICATION_BACKENDS = ('custom_user.backends.CustomUserAuth',)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

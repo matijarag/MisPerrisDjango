@@ -20,5 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('perris/', include('Perris.urls')),
     path('usuario/', include('RegistroUsu.urls')),
-    path('accounts/', include('custom_user.urls')),
 ]

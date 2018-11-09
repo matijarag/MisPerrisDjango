@@ -4,18 +4,42 @@
     <meta charset="utf-8">
     <!-- bloque de contenido para el título-->
     <title>Crud con Python y Django | {% block title %}Página principal{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+      <link type="text/css" rel="stylesheet" href="../static/css/lightbox.css" />
+      <link rel="stylesheet" type="text/css" href="../static/css/mio.css"> 
 </head>
 <body>
     <div id="header">
         <!-- bloque de contenido para el menú-->
         {% block header %}
-            <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <a class="navbar-brand" >asd</a>
-                    <a class="navbar-brand" >asd</a>
-                </div>
-            </nav>
+        <nav class="nav-center">
+            <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo"><img src="../static/imagenes/logo.png"></a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <div class="nav-wrapper container">
+                        <ul class="right hide-on-med-and-down">
+                              <li><a href="#">inicio</a></li>
+                              <li><a href="#">quienes somos</a></li>
+                              <li><a href="#">Perritos</a></li>
+                              <li><a href="#">contactanos</a></li>
+                              <li><a href="/usuario">Resgitrarse</a></li>
+                              <li><a href="#">Iniciar Sesion</a></li>
+                        </ul>
+                  </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">inicio</a></li>
+            <li><a href="#">quienes somos</a></li>
+            <li><a href="#">Perritos</a></li>
+            <li><a href="#">contactanos</a></li>
+      </ul>
         {% endblock %}
     </div>
     <div class="container">
@@ -27,7 +51,13 @@
  
     <footer class="footer">
         <!-- bloque de contenido para el footer-->
-        {% block footer %}{% endblock %}
+        {% block footer %}
+        
+        {% endblock %}
     </footer>
+    <script type="text/javascript" src="../static/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../static/js/materialize.min.js"></script>
+<script type="text/javascript" src="../static/js/lightbox.js"></script>
+<script type="text/javascript" src="../static/js/init.js"></script>
 </body>
 </html>
