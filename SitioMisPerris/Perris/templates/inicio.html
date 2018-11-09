@@ -3,165 +3,35 @@
 Index Perris
 {% endblock %}
 {% block content %}
+{% for mascota in Mascotas %}
+    {% load static %}
+        <img src="{% static 'Perris/static'%}{{ mascota.foto }}" style="height : 100px; width : 100px;">
+    {% endfor %}
 
-<div class="row" style="background: #6DCCAA;">
+    <form enctype="multipart/form-data" method= "POST">
+        {%csrf_token%}
+        {{form.as_p}}
 
+        <input type="submit" value="Agregar" >
+    </form>
 
-
-    <div class="carousel carousel-slider center">
-          <div class="carousel-fixed-item center middle-indicator">
-                <div class="left">
-                      <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
-                                  class="material-icons left  middle-indicator-text">chevron_left</i></a>
-                </div>
-
-                <div class="right">
-                      <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i
-                                  class="material-icons right middle-indicator-text">chevron_right</i></a>
-                </div>
-          </div>
-          <div class="carousel-item amber white-text" href="#one!" style="background-image: url('static/img/slider1.jpg');background-size: 100%">
-                <h2 style="z-index: 1">Alberto</h2>
-                <p>es un perro el cual fue adoptado por martha luego de que se perdiera en las calles</p>
-          </div>
-          <div class="carousel-item amber white-text" href="#two!" style="background-image: url('static/img/slider2.jpg');background-size: 100%">
-                <h2 style="z-index: 1">Tonca</h2>
-                <p>es la mejor acompañante de julia es su dia a dia </p>
-          </div>
-          <div class="carousel-item green white-text" href="#three!" style="background-image: url('static/img/slider3.jpg');background-size: 100%">
-                <h2 style="z-index: 1">Julio</h2>
-                <p>Es un hombre el cual ya a adoptado muchos perros y es feliz con ellos</p>
-          </div>
-          <div class="carousel-item blue white-text" href="#four!" style="background-image: url('static/img2/chino4.jpg');background-size: 100%">
-                <h2 style="z-index: 1">hachiko</h2>
-                <p>hachico fue un perro abandonado por sus dueños el cual ahora vive feliz con su nueva familia</p>
-          </div>
-    </div>
-    <div class="custom col s12">
-          <div class="row">
-                <div class="col s12" align="center">
-                      <div class="container" style="margin-top: 20px">
-                            <a class="btn-floating waves-effect waves-light"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn-floating waves-effect waves-light"><i class="fab fa-google-plus-g"></i></a>
-                            <a class="btn-floating waves-effect waves-light"><i class="fab fa-instagram"></i></a>
-                            <a class="btn-floating waves-effect waves-light"><i class="fas fa-envelope"></i></a>
-                      </div>
-                </div>
-          </div>
-    </div>
-
-</div>
-</section>
-<div class="container" id="quienesomos">
-    <div class="row">
-          <div class="col s6">
-                <h5 class="rescate">RESCATE</h5>
-                <h6 class="etapa">ETAPA UNO</h6>
-                <div class="divider"></div>
-                <p class="texto">Rescatamos perros en situacion de peligro y/o abandono.Los rehabilitamos y los
-                      preparamos
-                      para buscarles un nuevo hogar</p>
-                <img class="rescate col s12" align="right" src=" static/imagenes/rescate.jpg">
-          </div>
-
-          <div class="col s6">
-                <div class="col s12">
-                      <img class="crowfunding col s12" src="static/imagenes/crowfunding.jpg" align="left">
-                      <h5 class="crowfunding col s12">CROWFUNDING</h5>
-                      <h6 class="etapa1 col s12">FINANCIAMIENTO</h6>
-                      <div class="divider col s12"></div>
-                      <p class="texto1 col s12">Sigue nuestras redes sociales para informarte acerca de
-                            diversas campañas y actividades que realizamos para obtener financiamiento para
-                            seguir ayudando</p>
-                      <div class="col s12">
-                            <a class="waves-effect waves-light btn col s12" href="formulario.html"><I class="campaña">CAMPAÑAS</I></a>
-                      </div>
-                </div>
-          </div>
-
-    </div>
-</div>
-<div class="row" id="servicios">
-    <ul id="tabs-swipe-demo" class="tabs">
-          <li class="tab col s3"><a class="active" href="#test-swipe-1">Adopcion 1</a></li>
-          <li class="tab col s3"><a href="#test-swipe-2">Adopcion 2</a></li>
-          <li class="tab col s3"><a href="#test-swipe-3">Adopcion 3</a></li>
-    </ul>
-</div>
-
-<div class="row" id="test-swipe-1" style="background-color: #6DCCAA;">
-    <div class="row">
-          <div class="col s3">
-                <div class="card">
-                      <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="static/img2/pug.jpg" style="width: 100%">
-                      </div>
-                      <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Pug<i class="material-icons right">more_vert</i></span>
-                            <p><a href="formulario.html">Adoptar</a></p>
-                      </div>
-                      <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Perrito Pug<i class="material-icons right">close</i></span>
-                            <p>Perrito encontrado en la calle en el centro de santiago necesita un hogar.</p>
-                      </div>
-                </div>
-          </div>
-
-          <div class="col s3">
-                <div class="card">
-                      <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="static/img2/siberian.jpg" style="width: 100%">
-                      </div>
-                      <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Siberiano<i class="material-icons right">more_vert</i></span>
-                            <p><a href="formulario.html">Adoptar</a></p>
-                      </div>
-                      <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Perro Siberiano<i class="material-icons right">close</i></span>
-                            <p>luck es un perro muy amigable y cariñoso que necesita un hogar .</p>
-                      </div>
-                </div>
-
-          </div>
-          <div class="col s3">
-                <div class="card">
-                      <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="static/img2/juguetePerro.jpg" style="width: 100%">
-                      </div>
-                      <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Quiltro<i class="material-icons right">more_vert</i></span>
-                            <p><a href="formulario.html">Adoptar</a></p>
-                      </div>
-                      <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Perrito Quiltro<i class="material-icons right">close</i></span>
-                            <p>mario es un cachorro el cual sus dueños no pudieron criar y lo dejaron en
-                                  adopcion para una familia</p>
-                      </div>
-                </div>
-          </div>
-
-          <div class="col s3">
-                <div class="card">
-                      <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="static/img2/perrosleep.jpg" style="width: 100%">
-                      </div>
-                      <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Quiltro 2<i class="material-icons right">more_vert</i></span>
-                            <p><a href="formulario.html">Adoptar</a></p>
-                      </div>
-                      <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Perrito Quiltro<i class="material-icons right">close</i></span>
-                            <p>cachorro de 2 meses que necesita un hogar.</p>
-                      </div>
-                </div>
-          </div>
-    </div>
-</div>
 {% endblock %}
 {% block footer %}
- <div class="navbar navbar-inverse navbar-fixed-bottom">
- <center style="padding-top: 12px">
- <small style="color: #fff">Footer Form</small>
- </center>
- </div>
+<div class="row" style="text-align:center; background-color:grey;">
+    <div class="col s4">
+          <h3>
+              Contacto  
+          </h3>
+          <p>Direccion</p>
+    </div>
+    <div class="col s4">
+          <p>Logo</p>
+    </div>
+    <div class="col s4">
+          <h3>links de interés</h3>
+          <p>link1</p>
+          <p>link2</p>
+          <p>link3</p>
+    </div>
+</div>
 {% endblock %}
