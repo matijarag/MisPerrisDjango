@@ -20,3 +20,6 @@ def index(request):
         db_mascota = Mascota(nombre=nombre, raza_predominante=raza_predominante, descripcion=descripcion, estado=estado, foto=foto)
         db_mascota.save()
     return render(request,'index.html',variable)
+
+def inicio(request):
+    return render(request,'inicio.html')

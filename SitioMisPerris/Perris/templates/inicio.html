@@ -6,7 +6,7 @@ Index Perris
 
 <div class="row" style="background: #6DCCAA;">
 
-    {% load static %}
+
 
     <div class="carousel carousel-slider center">
           <div class="carousel-fixed-item center middle-indicator">
@@ -157,18 +157,6 @@ Index Perris
           </div>
     </div>
 </div>
-
-    {% for mascota in Mascotas %}
-    {% load static %}
-        <img src="{% static 'Perris/'%}{{ mascota.foto }}" style="height : 100px; width : 100px;">
-    {% endfor %}
-
-    <form enctype="multipart/form-data" method= "POST">
-        {%csrf_token%}
-        {{form.as_p}}
-
-        <input type="submit" value="Agregar" >
-    </form>
 {% endblock %}
 {% block footer %}
  <div class="navbar navbar-inverse navbar-fixed-bottom">
